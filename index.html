@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NoteApp</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-brand">NoteApp</div>
+    <div class="nav-links">
+      <a href="#" class="active">All Notes</a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <div id="notes-grid" class="notes-grid"></div>
+    <div id="empty-state" class="empty-state">
+      <p>No notes yet. Click the + button to add one.</p>
+    </div>
+  </main>
+
+  <button id="add-btn" class="add-btn" aria-label="Add note">+</button>
+
+  <div id="modal-overlay" class="modal-overlay hidden">
+    <div class="modal">
+      <div class="modal-header">
+        <h2>New Note</h2>
+        <button id="modal-close" class="modal-close" aria-label="Close">&times;</button>
+      </div>
+      <form id="note-form">
+        <input type="text" id="note-title" placeholder="Title" required autocomplete="off">
+        <textarea id="note-body" placeholder="Write your note..." rows="6" required></textarea>
+        <div class="modal-actions">
+          <button type="button" id="modal-cancel" class="btn-cancel">Cancel</button>
+          <button type="submit" class="btn-save">Save</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
